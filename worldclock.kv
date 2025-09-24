@@ -1,0 +1,134 @@
+# worldclock.kv (Corrected Version)
+
+<CardLayout@BoxLayout>:
+    # This is now just a styling rule for our cards
+    orientation: 'vertical'
+    padding: dp(10)
+    spacing: dp(5)
+    size_hint_y: None  # Allow cards to have a fixed height
+    height: self.minimum_height # Set height based on content
+    canvas.before:
+        Color:
+            rgba: 0.25, 0.25, 0.25, 1 # Dark grey background for the card
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [dp(10)]
+
+<WorldClockLayout>:
+    orientation: 'vertical'
+    padding: dp(15)
+    spacing: dp(10)
+    canvas.before:
+        Color:
+            rgba: 0.18, 0.18, 0.18, 1 # Very dark background for the whole app
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    # --- Each card is now a simple, styled layout with direct IDs ---
+
+    CardLayout:
+        Label:
+            text: "Philippines"
+            font_size: '20sp'
+            bold: True
+            color: 1, 1, 1, 1
+        Label:
+            id: ph_offset # Direct ID
+            font_size: '13sp'
+            italic: True
+            color: 0.8, 0.8, 0.8, 1
+        Label:
+            id: ph_time # Direct ID
+            font_size: '28sp'
+            bold: True
+            color: 0, 1, 0, 1
+        Label:
+            id: ph_date # Direct ID
+            font_size: '14sp'
+            color: 0.9, 0.9, 0.9, 1
+
+    CardLayout:
+        Label:
+            text: "New York, USA"
+            font_size: '20sp'
+            bold: True
+            color: 1, 1, 1, 1
+        Label:
+            id: nyc_offset # Direct ID
+            font_size: '13sp'
+            italic: True
+            color: 0.8, 0.8, 0.8, 1
+        Label:
+            id: nyc_time # Direct ID
+            font_size: '28sp'
+            bold: True
+            color: 0, 1, 0, 1
+        Label:
+            id: nyc_date # Direct ID
+            font_size: '14sp'
+            color: 0.9, 0.9, 0.9, 1
+
+    CardLayout:
+        Label:
+            text: "London, UK"
+            font_size: '20sp'
+            bold: True
+            color: 1, 1, 1, 1
+        Label:
+            id: lon_offset # Direct ID
+            font_size: '13sp'
+            italic: True
+            color: 0.8, 0.8, 0.8, 1
+        Label:
+            id: lon_time # Direct ID
+            font_size: '28sp'
+            bold: True
+            color: 0, 1, 0, 1
+        Label:
+            id: lon_date # Direct ID
+            font_size: '14sp'
+            color: 0.9, 0.9, 0.9, 1
+
+    CardLayout:
+        Label:
+            text: "Riyadh, Saudi Arabia"
+            font_size: '20sp'
+            bold: True
+            color: 1, 1, 1, 1
+        Label:
+            id: ruh_offset # Direct ID
+            font_size: '13sp'
+            italic: True
+            color: 0.8, 0.8, 0.8, 1
+        Label:
+            id: ruh_time # Direct ID
+            font_size: '28sp'
+            bold: True
+            color: 0, 1, 0, 1
+        Label:
+            id: ruh_date # Direct ID
+            font_size: '14sp'
+            color: 0.9, 0.9, 0.9, 1
+
+    CardLayout:
+        Label:
+            text: "Sydney, Australia"
+            font_size: '20sp'
+            bold: True
+            color: 1, 1, 1, 1
+        Label:
+            id: syd_offset # Direct ID
+            font_size: '13sp'
+            italic: True
+            color: 0.8, 0.8, 0.8, 1
+        Label:
+            id: syd_time # Direct ID
+            font_size: '28sp'
+            bold: True
+            color: 0, 1, 0, 1
+        Label:
+            id: syd_date # Direct ID
+            font_size: '14sp'
+            color: 0.9, 0.9, 0.9, 1
